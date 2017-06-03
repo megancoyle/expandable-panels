@@ -6,7 +6,7 @@
 body {
 	margin: 0; padding: 0;
 	font-family: 'Open Sans', sans-serif; font-size: 15px; line-height: 1.25em;
-	color: #625c3c; background-color: #fff; 
+	color: #625c3c; background-color: #fff;
 }
 header { text-align: center; padding: 0px 0 15px 0; background-color: #e7e2c9; }
 header::before {
@@ -32,14 +32,39 @@ article.attractions aside > div img { width: 155px; border-radius: 50%; border: 
 article.attractions aside > div p { text-align: left; }
 footer { border-top: 2px solid #e7e2c9; height: 75px; color: rgba(0,0,0,.3); padding: 10px; text-align: center; font-size: .9em; }
 
-
 /* CSS for Expanding Panels */
+.expanding-panel .expanding-panel-trigger {
+	cursor: pointer;
+	color: #00a5d5;
+	font-weight: 600;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
 
+.expanding-panel .expanding-panel-trigger:hover {
+	color: #555;
+	text-decoration: underline;
+}
 
+.expanding-panel .expanding-panel-trigger::before {
+	content: '+ ';
+	padding-right: 5px;
+}
 
+.expanding-panel .expanding-panel-content-container {
+	overflow: hidden;
+}
 
+.expanding-panel .expanding-panel-content {
+	padding: 1px 0;
+}
 
+.expanding-panel.open .expanding-panel-trigger::before {
+	content: '\2013 ';
 
+}
 
 /* Media Queries */
 
@@ -59,5 +84,3 @@ footer { border-top: 2px solid #e7e2c9; height: 75px; color: rgba(0,0,0,.3); pad
 	article.attractions aside > div { padding: 0 25px 0 35px; margin-bottom: 50px; }
 	article.attractions aside > div img { width: 140px; border-width: 8px; position: static; margin-bottom: 5px; margin-left: -20px; }
 }
-
-
